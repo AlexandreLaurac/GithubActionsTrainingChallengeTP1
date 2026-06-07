@@ -9,9 +9,9 @@ name: CI
 
 on:
   push:
-    branches: main
+    branches: master
   pull_request:
-    branches: main
+    branches: master
 
 
 # Permissions minimales (bonne pratique sécurité)
@@ -29,7 +29,7 @@ jobs:
       - name: installation de Python
         uses: actions/setup-python@a309ff8b426b58ec0e2a45f0f869d46889d02405
         with:
-          python-version: 3.11
+          python-version: '3.11'
 
       - name: installation des dépendances
         run: pip install -r requirements.txt
